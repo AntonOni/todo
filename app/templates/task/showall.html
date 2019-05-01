@@ -1,0 +1,17 @@
+{% extends "task/layout.html" %}
+{% block content %}
+
+<h1>Show All Tasks</h1>
+
+{% for task in tasks %}
+    <p>
+        <b>Id:</b> {{ task['id'] }} </br>
+        <b>Name:</b> {{ task['name'] }} </br>
+        <b>Description:</b> {{ task['description'] }} </br>
+        <b>Status:</b> {{ 'Inativa' if task['active'] == '0' else 'Ativa' }}</br>
+    </p>
+{% endfor %}
+
+<a class="btn btn-primary pull-right" href="/">Voltar</a>
+
+{% endblock %}

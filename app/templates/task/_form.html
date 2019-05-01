@@ -1,0 +1,46 @@
+<script language="javascript" type="text/javascript">
+    function formValidate() {
+
+        var taskName = Task.taskName.value;
+        var taskDescription = Task.taskDescription.value;
+     
+        if (taskName == "") {
+            alert('Preencha o campo com o nome da tarefa!');
+            Task.taskName.focus();
+            return false;
+        }
+
+        else if (taskDescription == "") {
+            alert('Preencha o campo com a descrição da tarefa!');
+            Task.taskDescription.focus();
+            return false;
+        }
+
+        else {
+            alert('Tarefa enviada com sucesso!');
+        }
+    }
+</script>
+
+<form action="{{ action }}" method="post" name="Task" onsubmit="return formValidate()">
+    <p>
+        <label>Task Name:<br/>
+            <input type="text" class="form-control" name="name" id="taskName" placeholder="{{ task['name'] }}">
+        </label>
+    </p>
+    <p>
+        <label>Description:<br/>
+            <textarea type="text" class="form-control" name="description" id="taskDescription" placeholder="{{ task['description'] }}"></textarea>
+        </label>
+    </p>
+    <p>
+        <label>Status:<br/>
+            <select name="active">
+                <option value="0">Inativa</option>
+                <option selected value="1">Ativa</option>
+            </select>
+        </label>
+    </p>
+    <input type="submit" class="btn btn-primary" value="Enviar">
+    <a class="btn btn-danger" href="/">Cancelar</a>
+</form>

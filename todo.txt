@@ -1,0 +1,24 @@
+#Tasks#
+
+Create:
+
+Edit:
+
+Delete:
+
+Show:
+
+Show all:
+
+General:
+[ ] - Insert status functionality / checkbox selectors to done and undone tasks
+[ ] - Flash messages
+[ ] - Add bootstrap style columns
+[ ] - Refactor javascript
+[ ] - Refactor buttons code to submit
+[ ] - Add progress bar on page loading
+[ ] - Add fav task functionality
+[ ] - Add user login (flask-login)
+
+JavaScript:
+[ ] - Treat exceptions on click in delete and edit button and row is selected

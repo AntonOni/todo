@@ -1,0 +1,12 @@
+{% extends "task/layout.html" %}
+{% block content %}
+
+<h1>Show Task - Id: {{ task['id']}}</h1>
+
+<b>Name:</b> {{ task['name'] }} </br>
+<b>Description:</b> {{ task['description'] }} </br>
+<b>Status:</b> {{ 'Inativa' if task['active'] == '0' else 'Ativa' }}</br>
+
+<a class="btn btn-primary pull-right" href="/">Voltar</a>
+
+{% endblock %}
